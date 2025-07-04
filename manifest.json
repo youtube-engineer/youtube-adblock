@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "description" : "Delete Advertisement", 
+    "name": "AdBlock",
+    "version": "0.1",
+   
+    "action": { 
+      "default_popup": "popup.html" 
+    },
+    "content_scripts": [{ 
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["adBlock.js"] 
+    }],
+    "permissions": [ 
+      "tabs"
+    ]
+}
