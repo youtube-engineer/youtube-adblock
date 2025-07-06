@@ -110,9 +110,9 @@ observer.observe(document.body, { childList: true, subtree: true });
 //     setTimeout(adBlock, 5000);
 // };
 
-// // 3. Listen for messages from other parts of the extension (e.g., background script, popup)
-// chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-//     adBlock();
-//     sendResponse({ status: "adBlock executed" });
-//     return true;
-// });
+// 3. Listen for messages from other parts of the extension (e.g., background script, popup)
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    adBlock();
+    sendResponse({ status: "adBlock executed" });
+    return true;
+});
