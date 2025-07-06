@@ -10,6 +10,12 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["adBlock.js"] 
     }],
+    "web_accessible_resources": [
+      {
+        "resources": ["insert.mp4"],
+        "matches": ["http://*/*", "https://*/*"]
+      }
+  ],
     "permissions": [ 
       "tabs"
     ]
